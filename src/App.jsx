@@ -1,6 +1,8 @@
-import React, { useState, useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { Router, Switch, Route, Link } from "react-router-dom";
+// import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
+
+import { useDispatch } from "react-redux";
+import { Router, Switch, Route} from "react-router-dom";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
@@ -14,7 +16,7 @@ import BoardUser from "./components/BoardUser";
 import BoardModerator from "./components/BoardModerator";
 import BoardAdmin from "./components/BoardAdmin";
 
-import { logout } from "./actions/auth";
+// import { logout } from "./actions/auth";
 import { clearMessage } from "./actions/message";
 
 import { history } from "./helpers/history";
