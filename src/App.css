@@ -1,0 +1,31 @@
+.top-spacer {
+  padding-top: 6.5rem;
+}
+
+.btn.btn-primary {
+  background-color: #12278c;
+}
+
+.btn.btn-md {
+  height: 59.04px;
+  font-size: 16.4px;
+  padding: 0 43.46px;
+  border-radius: 4.92px;
+}
+
+.btn {
+  font-weight: 500;
+  border: none;
+  outline: none;
+}
+
+.form-group .form-control {
+  position: relative;
+  border: .5px solid rgba(97,97,97,.3);
+  height: 55px;
+  padding: 0 21px;
+  border-radius: 4.92px;
+  margin-bottom: 16px;
+  outline: none;
+  -webkit-appearance: none;
+}

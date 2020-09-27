@@ -1,0 +1,21 @@
+#login .signin-form {
+  position: relative;
+  border-radius: 6px;
+  border: .5px solid rgba(18,38,140,.1);
+  padding: 48px;
+  background-color: #fff;
+}
+
+#login .btn.btn-md {
+  height: 59.04px;
+  font-size: 16.4px;
+  padding: 0 43.46px;
+  border-radius: 4.92px;
+}
+  
+#login .btn {
+  font-weight: 500;
+  border: none;
+  outline: none;
+}
+  
