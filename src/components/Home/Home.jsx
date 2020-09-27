@@ -1,7 +1,8 @@
 // import React, { useState, useEffect } from "react";
 import React from "react";
 import "./Home.css";
-import logo from "../../assets/media/boromi-logo.PNG"
+import logo from "../../assets/media/boromi-logo.PNG";
+import { Link } from "react-router-dom";
 
 // import UserService from "../../services/user.service";
 
@@ -28,17 +29,19 @@ const Home = () => {
     <div id="home">
       <nav className="main-nav_bar container">
       <div className="d-flex justify-content-between">
-        <a href="./index.html">
-          <img src={logo} alt="logo" className="logo"></img>
-        </a>
+        <Link to="/">
+            <img src={logo} alt="logo" className="logo"></img>
+        </Link>
         <ul className="d-flex flex-row-reverse align-items-center nav-links">
           <li className="nav-link">
-            <a href="./register.html">
+            <Link to="/register">
               <button type="button" className="btn btn-sm btn-primary">Get Started</button>
-            </a>
+            </Link>    
           </li>
           <li className="nav-link">
-            <a href="/login.html"><p className="mb-0">Sign In</p></a>
+            <Link to="/login">
+              <p className="mb-0">Sign In</p>
+            </Link>
           </li>
           <li className="nav-link">For Businesses</li>
           <li className="nav-link">For Individuals</li>
