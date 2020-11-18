@@ -1,0 +1,14 @@
+[
+  {
+    "fistName": "Musa",
+    "lastName": "Mustapha",
+    "email": "musabrillz@gmail.com",
+    "password": "hashedpassword01"
+  },
+  {
+    "fistName": "Ibrahim",
+    "lastName": "Aisha",
+    "email": "aisha@gmail.com",
+    "password": "hashedpassword02"
+  }
+]

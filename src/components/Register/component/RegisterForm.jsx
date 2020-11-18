@@ -1,12 +1,35 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
+import PropTypes from "prop-types";
 
-export default function RegisterForm() {
+export default function RegisterForm(props) {
   const { register, handleSubmit, errors } =  useForm();
-
+  const [state, setState] = useState({
+    data: {},
+    isLoading: false
+  })
+  
   const onSubmit =(data) => {
-    console.log(data);
+    setState({isLoading: true})
+    props.registerUserRequest(data).then((_data) => {
+      setState({data: _data, isLoading: false})
+    }
+    ).catch(e => {
+      setState({data: e, isLoading: false})
+    });
+  }
+
+  function DisplayError(){
+    const data = state.data;
+    
+    if (!data.status) {
+      return <p> </p>
+    } else if (data.status) {
+      return <p>Succcess: {data.message}</p>
+    } else {
+      return <p className="message text-danger text-center">Error: {data.message}</p> 
+    }
   }
 
   return (
@@ -15,6 +38,7 @@ export default function RegisterForm() {
         <h3 className="header text-center text-sm-left">Create an account</h3>
         <p className="body text-center text-sm-left pb-4">Set up your account and start borrowing in no time with no collateral</p>
       </div>
+      <DisplayError />
       <div className="row">
         <div className="col-sm-6">
           <div className="form-group">
@@ -58,3 +82,7 @@ export default function RegisterForm() {
   </form>
   );
 }
+
+RegisterForm.propTypes = {
+  registerUserRequest: PropTypes.func.isRequired
+} 
